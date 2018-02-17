@@ -5,6 +5,7 @@ const session = require('express-session');
 const path = require('path');
 const mocha = require('mocha');
 const index = require('./api/index');
+const admin = require('./api/admin');
 require('./db_conn');
 const app = express();
 // const index = require('./ap')
@@ -15,7 +16,7 @@ app.use(express.static(path.join(__dirname,'dist')));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-
+app.use('/api/admin',admin); // redirect any admin request to the admin route file
 app.use('/api',index);
 
 // tell server to go to the dist folder index.html for all routes
