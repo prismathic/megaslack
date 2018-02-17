@@ -2,4 +2,4 @@
 
 My Personal Blog/ Website. Built with MEAN Stack technology. 
 
-Hosted on heroku @ megaslack.herokuapp.com
+Hosted on heroku @ http://megaslack.herokuapp.com
